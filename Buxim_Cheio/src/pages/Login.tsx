@@ -1,22 +1,25 @@
 
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const navigate = useNavigate();
+
   function handleLogin(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    console.log("Email:", email);
-    console.log("Senha:", senha);
+    if (email.trim() !== "" && senha.trim() !== "") {
+      navigate("/home");
+    }
   }
 
   return (
     <main className="login-container">
       <section className="login-card">
-
         <div className="login-header">
           <h1>Site de Receita</h1>
           <p>Entre na sua conta para continuar</p>
@@ -53,12 +56,13 @@ function Login() {
         </form>
 
         <p className="register-text">
-          Ainda não tem uma conta? <a href="#">Cadastre-se</a>
+          Ainda não tem uma conta?{" "}
+          <Link to="/cadastro">Cadastre-se</Link>
         </p>
-
       </section>
     </main>
   );
 }
 
 export default Login;
+
