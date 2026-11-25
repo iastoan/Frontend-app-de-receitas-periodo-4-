@@ -5,12 +5,12 @@ O foco do nosso app vai ser a possibilidade dos usuarios conseguirem criar uma r
 
 # Membros e suas funções:
 
-Yan Abilio dos Santos Ferreira: Design, FRontEnd React + JavaScript + Springbot
+Yan Abilio dos Santos Ferreira: Design, FRontEnd React + JavaScript + Springboot
 
 Gustavo Lucena Cortez: Documentação, Banco de dados
 
-Camilio Emilio Lacerda do Nascimento:Api, Banco de dados
+Caio Emilio Lacerda do Nascimento: Api, Springboot
 
-Wanderson da Silva Santos: Api, Springbot
+Wanderson da Silva Santos: Api, Banco de Dados
 
 Gabriel Nascimento de Souza: Documentação, Design, FRontEnd React + JavaScript
