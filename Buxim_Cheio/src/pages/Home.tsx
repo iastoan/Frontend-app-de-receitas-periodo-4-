@@ -11,7 +11,7 @@ function Home() {
         <nav>
           <a href="/home" className="active">Início</a>
           <a href="/receitas">Receitas</a>
-          <a href="/ingredientes">Ingredientes</a>
+          <a href="/Categorias.tsx">Categorias</a>
           <a href="/planos">Meus Planos</a>
           <a href="/perfil">Meu Perfil</a>
           <a href="/configuracoes">Configurações</a>

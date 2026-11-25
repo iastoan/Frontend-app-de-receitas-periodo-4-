@@ -1,0 +1,97 @@
+.rc {
+  --primary: #ffffff;   /* cor principal: branco */
+  --secondary: #245438; /* cor secundária: verde escuro */
+
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+
+.rc__header {
+  margin-bottom: 1.75rem;
+}
+
+.rc__title {
+  margin: 0 0 0.35rem;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.rc__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.rc__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rc__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  min-height: 130px;
+  padding: 1rem;
+  border: 1px solid var(--secondary);
+  border-left-width: 6px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: var(--secondary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.rc__card:hover {
+  background: color-mix(in srgb, var(--secondary) 10%, var(--primary));
+}
+
+.rc__card:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.rc__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rc__name {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.rc__card--active,
+.rc__card--active:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+@media (max-width: 420px) {
+  .rc__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc__card {
+    transition: none;
+  }
+}
