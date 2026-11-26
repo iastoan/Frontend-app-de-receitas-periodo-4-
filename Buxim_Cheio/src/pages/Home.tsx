@@ -1,7 +1,9 @@
-
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
 
@@ -9,15 +11,55 @@ function Home() {
         <h2 className="logo">ReceitasJA</h2>
 
         <nav>
-          <a href="/home" className="active">Início</a>
-          <a href="/receitas">Receitas</a>
-          <a href="/Categorias.tsx">Categorias</a>
-          <a href="/planos">Meus Planos</a>
-          <a href="/perfil">Meu Perfil</a>
-          <a href="/configuracoes">Configurações</a>
+          <button
+            type="button"
+            className="active"
+            onClick={() => navigate("/home")}
+          >
+            Início
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate("/receitas")}
+          >
+            Receitas
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate("/categorias")}
+          >
+            Categorias
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate("/planos")}
+          >
+            Meus Planos
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate("/perfil")}
+          >
+            Meu Perfil
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate("/configuracoes")}
+          >
+            Configurações
+          </button>
         </nav>
 
-        <button className="logout-button">
+        <button
+          type="button"
+          className="logout-button"
+          onClick={() => navigate("/")}
+        >
           Sair da conta
         </button>
       </aside>
@@ -37,6 +79,7 @@ function Home() {
 
         <section className="welcome-section">
           <h1>Bem-vindo ao ReceitasJA!</h1>
+
           <p>
             Descubra receitas, organize ingredientes e planeje
             suas refeições.
@@ -44,20 +87,34 @@ function Home() {
         </section>
 
         <section className="dashboard-cards">
-          <div className="dashboard-card">
+
+          <button
+            type="button"
+            className="dashboard-card"
+            onClick={() => navigate("/receitas")}
+          >
             <h3>Minhas Receitas</h3>
             <p>Organize suas receitas favoritas.</p>
-          </div>
+          </button>
 
-          <div className="dashboard-card">
-            <h3>Ingredientes</h3>
-            <p>Gerencie os ingredientes das suas receitas.</p>
-          </div>
+          <button
+            type="button"
+            className="dashboard-card"
+            onClick={() => navigate("/categorias")}
+          >
+            <h3>Categorias</h3>
+            <p>Explore receitas separadas por categorias.</p>
+          </button>
 
-          <div className="dashboard-card">
+          <button
+            type="button"
+            className="dashboard-card"
+            onClick={() => navigate("/planos")}
+          >
             <h3>Meus Planos</h3>
             <p>Organize suas refeições durante a semana.</p>
-          </div>
+          </button>
+
         </section>
 
       </main>
@@ -66,3 +123,6 @@ function Home() {
 }
 
 export default Home;
+
+
+
