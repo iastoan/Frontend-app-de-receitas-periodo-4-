@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import Categorias from "./pages/Categorias";
+import Perfil from "./pages/Perfil";
 
 function App() {
   return (
@@ -17,9 +18,12 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
 
         <Route path="/categorias" element={<Categorias />} />
+
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
