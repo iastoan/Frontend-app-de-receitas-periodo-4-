@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import Categorias from "./pages/Categorias";
 import Perfil from "./pages/Perfil";
+import Configurações from "./pages/Configurações";
+
 
 function App() {
   return (
