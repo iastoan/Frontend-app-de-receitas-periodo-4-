@@ -6,29 +6,23 @@ import Home from "./pages/Home";
 import Cadastro from "./pages/Cadastro";
 import Categorias from "./pages/Categorias";
 import Perfil from "./pages/Perfil";
-import Configurações from "./pages/Configurações";
-
+import Configuracoes from "./pages/Configuracoes";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-
         <Route path="/home" element={<Home />} />
-
         <Route path="/cadastro" element={<Cadastro />} />
-
         <Route path="/categorias" element={<Categorias />} />
-
         <Route path="/perfil" element={<Perfil />} />
-
-        <Route path="/configurações" element={<Configurações />} />
-
+        <Route path="/configuracoes" element={<Configuracoes />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
 
