@@ -20,6 +20,9 @@ function App() {
         <Route path="/categorias" element={<Categorias />} />
 
         <Route path="/perfil" element={<Perfil />} />
+
+        <Route path="/configurações" element={<Configurações />} />
+
       </Routes>
     </BrowserRouter>
   );
