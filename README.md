@@ -1,7 +1,7 @@
 # Frontend-app-de-receitas-periodo-4
-Esse e um repositorio para a criação de um app de vista de receitas e planejamento alimentar do ususario valendo a nota dos membros da mateira de Front-End frameworks.
+Esse e um repositorio para a criação de um app de receitas e planejamento alimentar do usuário, valendo a nota dos membros da matéria de Front-End Frameworks.
 
-O foco do nosso app vai ser a possibilidade dos usuarios conseguirem criar uma rotina alimentar para suas vidas podendo escolher quais receitas poderão ser escolhida dependedo das retrições aalimentares escolhidas
+O foco da aplicação vai ser a possibilidade dos usuários conseguirem criar uma rotina alimentar, podendo escolher as receitas baseado nas suas preferências pessoais.
 
 # Membros e suas funções:
 
