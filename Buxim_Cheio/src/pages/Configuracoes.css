@@ -1,0 +1,318 @@
+.config-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+  max-width: 760px;
+}
+
+.config-card h3 {
+  color: #245438;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.config-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.config-linha-texto label {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.config-linha-texto p {
+  color: #78847b;
+  font-size: 14px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.config-switch {
+  position: relative;
+  width: 52px;
+  height: 30px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  background: #c5cfc8;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.config-switch--ativo {
+  background: #2c6746;
+}
+
+.config-switch-bolinha {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s;
+}
+
+.config-switch--ativo .config-switch-bolinha {
+  transform: translateX(22px);
+}
+
+.config-switch:focus-visible {
+  outline: 3px solid #245438;
+  outline-offset: 3px;
+}
+
+/* FORMULÁRIO DE SENHA */
+
+.config-campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.config-campo label {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.config-campo input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.config-campo input:focus {
+  border-color: #2c6746;
+}
+
+.config-button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #183d2b;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.config-button:hover {
+  background: #2c6746;
+}
+
+.config-button:focus-visible {
+  outline: 3px solid #245438;
+  outline-offset: 3px;
+}
+
+.config-mensagem,
+.config-erro {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.config-mensagem {
+  background: #dcecdf;
+  color: #245438;
+}
+
+.config-erro {
+  background: #fbe3e0;
+  color: #9b2c20;
+}
+
+@media (max-width: 600px) {
+  .config-card {
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
+
+:root[data-theme="escuro"] body {
+  background: #101713;
+}
+
+/* Home / layout geral */
+[data-theme="escuro"] .home-container {
+  background: #121a15;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .sidebar {
+  background: #0c1a12;
+}
+
+[data-theme="escuro"] .topbar p,
+[data-theme="escuro"] .dashboard-card p,
+[data-theme="escuro"] .config-linha-texto p,
+[data-theme="escuro"] .perfil-dados dt {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .user-profile,
+[data-theme="escuro"] .dashboard-card,
+[data-theme="escuro"] .perfil-card,
+[data-theme="escuro"] .config-card {
+  background: #1c2822;
+  color: #e6efe8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="escuro"] .welcome-section {
+  background: #1f3a2b;
+}
+
+[data-theme="escuro"] .welcome-section p {
+  color: #b9cfbf;
+}
+
+[data-theme="escuro"] .dashboard-card h3,
+[data-theme="escuro"] .perfil-card-header h3,
+[data-theme="escuro"] .config-card h3 {
+  color: #8fd1a6;
+}
+
+[data-theme="escuro"] .dashboard-card:focus-visible,
+[data-theme="escuro"] .config-switch:focus-visible,
+[data-theme="escuro"] .config-button:focus-visible,
+[data-theme="escuro"] .perfil-button:focus-visible {
+  outline-color: #8fd1a6;
+}
+
+/* Perfil */
+[data-theme="escuro"] .perfil-avatar {
+  background: #2c6746;
+}
+
+[data-theme="escuro"] .perfil-dados dd {
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .perfil-mensagem,
+[data-theme="escuro"] .config-mensagem {
+  background: #1f3a2b;
+  color: #b9e3c5;
+}
+
+[data-theme="escuro"] .config-erro {
+  background: #3a1f1c;
+  color: #f2b3ab;
+}
+
+[data-theme="escuro"] .perfil-campo label,
+[data-theme="escuro"] .config-campo label {
+  color: #dce9df;
+}
+
+[data-theme="escuro"] .perfil-campo input,
+[data-theme="escuro"] .perfil-campo textarea,
+[data-theme="escuro"] .config-campo input {
+  background: #121a15;
+  border-color: #3a4a40;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .perfil-button--secundario {
+  color: #b9e3c5;
+  border-color: #5c7a67;
+}
+
+[data-theme="escuro"] .perfil-button--secundario:hover {
+  background: #26382d;
+  color: #e6efe8;
+  border-color: #8fd1a6;
+}
+
+[data-theme="escuro"] .config-switch {
+  background: #4a5a50;
+}
+
+[data-theme="escuro"] .config-switch--ativo {
+  background: #3d8a5c;
+}
+
+/* Login */
+[data-theme="escuro"] .login-container {
+  background: #101713;
+}
+
+[data-theme="escuro"] .login-card {
+  background: #1c2822;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="escuro"] .login-header p,
+[data-theme="escuro"] .register-text {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .form-group label {
+  color: #dce9df;
+}
+
+[data-theme="escuro"] .form-group input {
+  background: #121a15;
+  border-color: #3a4a40;
+  color: #e6efe8;
+}
+
+/* Cadastro */
+[data-theme="escuro"] .cadastro-container {
+  background: #101713;
+}
+
+[data-theme="escuro"] .cadastro-card {
+  background: #1c2822;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="escuro"] .cadastro-header h1 {
+  color: #8fd1a6;
+}
+
+[data-theme="escuro"] .cadastro-header p,
+[data-theme="escuro"] .cadastro-login {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .cadastro-login a {
+  color: #8fd1a6;
+}
+
+[data-theme="escuro"] .cadastro-button {
+  background: #2c6746;
+}
+
+[data-theme="escuro"] .cadastro-button:hover {
+  background: #397d56;
+}
+
+/* Categorias */
+[data-theme="escuro"] .rc {
+  --primary: #1c2822;
+  --secondary: #8fd1a6;
+}
+
+[data-theme="escuro"] .rc__card--active,
+[data-theme="escuro"] .rc__card--active:hover {
+  color: #0c1a12;
+}
