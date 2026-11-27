@@ -7,6 +7,7 @@ import Cadastro from "./pages/Cadastro";
 import Categorias from "./pages/Categorias";
 import Perfil from "./pages/Perfil";
 import Configuracoes from "./pages/Configuracoes";
+import Planos from "./pages/Planos";
 
 function App() {
   return (
@@ -18,11 +19,10 @@ function App() {
         <Route path="/categorias" element={<Categorias />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/configuracoes" element={<Configuracoes />} />
+        <Route path="/planos" element={<Planos />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-

@@ -1,0 +1,435 @@
+/* =========================================================
+   MEUS PLANOS
+   Usa as mesmas cores das outras telas (Home.css e Configuracoes.css).
+   O modo escuro é ativado pelo atributo data-theme="escuro" no <html>,
+   definido na tela de Configurações.
+   ========================================================= */
+
+.planos-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+  max-width: 1100px;
+}
+
+.planos-card h3 {
+  color: #245438;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.planos-subtitulo {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+.planos-erro {
+  background: #fbe3e0;
+  color: #9b2c20;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.planos-vazio {
+  color: #78847b;
+  font-size: 14px;
+}
+
+/* FORMULÁRIOS */
+
+.planos-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.planos-campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+
+.planos-campo label {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.planos-campo input,
+.planos-campo select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  background: white;
+  color: #26352b;
+}
+
+.planos-campo input:focus,
+.planos-campo select:focus {
+  border-color: #2c6746;
+}
+
+.planos-botao {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #183d2b;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.planos-botao:hover {
+  background: #2c6746;
+}
+
+.planos-botao:focus-visible,
+.planos-item:focus-visible,
+.remover:focus-visible {
+  outline: 3px solid #245438;
+  outline-offset: 3px;
+}
+
+/* LISTA DE PLANOS */
+
+.planos-lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.planos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: white;
+  color: #26352b;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.planos-item span {
+  color: #78847b;
+  font-size: 13px;
+}
+
+.planos-item:hover {
+  border-color: #2c6746;
+}
+
+.planos-item.ativo {
+  background: #2c6746;
+  border-color: #2c6746;
+  color: white;
+}
+
+.planos-item.ativo span {
+  color: #dcecdf;
+}
+
+/* GRADE SEMANAL
+   A rolagem horizontal fica dentro do próprio bloco, não na página. */
+
+.semana {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.semana-grade {
+  display: grid;
+  grid-template-columns: 130px repeat(7, minmax(120px, 1fr));
+  min-width: 960px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.semana-grade .linha {
+  display: contents;
+}
+
+.celula {
+  min-height: 70px;
+  padding: 8px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.celula.cabecalho {
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dcecdf;
+  color: #245438;
+}
+
+.celula.cabecalho small {
+  font-weight: 400;
+  color: #526b58;
+}
+
+.celula.rotulo {
+  font-weight: 600;
+  background: #f5f7f3;
+  color: #26352b;
+}
+
+.celula.fora {
+  background: repeating-linear-gradient(45deg, white 0 6px, #eeeeee 6px 7px);
+}
+
+.refeicao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  background: #dcecdf;
+  color: #245438;
+}
+
+.refeicao span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remover {
+  border: none;
+  background: transparent;
+  color: #245438;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* MODO ESCURO (mesmas cores das outras telas) */
+
+[data-theme="escuro"] .planos-card {
+  background: #1c2822;
+  color: #e6efe8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="escuro"] .planos-card h3 {
+  color: #8fd1a6;
+}
+
+[data-theme="escuro"] .planos-erro {
+  background: #3a1f1c;
+  color: #f2b3ab;
+}
+
+[data-theme="escuro"] .planos-vazio,
+[data-theme="escuro"] .planos-item span {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .planos-campo label {
+  color: #dce9df;
+}
+
+[data-theme="escuro"] .planos-campo input,
+[data-theme="escuro"] .planos-campo select {
+  background: #121a15;
+  border-color: #3a4a40;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .planos-item {
+  background: #121a15;
+  border-color: #3a4a40;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .planos-item:hover {
+  border-color: #8fd1a6;
+}
+
+[data-theme="escuro"] .planos-item.ativo {
+  background: #3d8a5c;
+  border-color: #3d8a5c;
+  color: white;
+}
+
+[data-theme="escuro"] .semana-grade {
+  border-color: #3a4a40;
+}
+
+[data-theme="escuro"] .celula {
+  border-color: #2d3a33;
+}
+
+[data-theme="escuro"] .celula.cabecalho {
+  background: #1f3a2b;
+  color: #b9e3c5;
+}
+
+[data-theme="escuro"] .celula.cabecalho small {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .celula.rotulo {
+  background: #151f19;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .celula.fora {
+  background: repeating-linear-gradient(45deg, #1c2822 0 6px, #2d3a33 6px 7px);
+}
+
+[data-theme="escuro"] .refeicao {
+  background: #26382d;
+  color: #b9e3c5;
+}
+
+[data-theme="escuro"] .remover {
+  color: #b9e3c5;
+}
+
+/* EXCLUIR PLANO E AVISO DE CONFIRMAÇÃO */
+
+.planos-cabecalho-plano {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.planos-cabecalho-plano h3 {
+  margin: 0;
+}
+
+.planos-botao-perigo,
+.planos-botao-secundario {
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.planos-botao-perigo {
+  border: none;
+  background: #9b2c20;
+  color: white;
+}
+
+.planos-botao-perigo:hover {
+  background: #b83a2b;
+}
+
+.planos-botao-secundario {
+  border: 1px solid #c5cfc8;
+  background: white;
+  color: #26352b;
+}
+
+.planos-botao-secundario:hover {
+  border-color: #2c6746;
+}
+
+.planos-botao-perigo:focus-visible,
+.planos-botao-secundario:focus-visible {
+  outline: 3px solid #245438;
+  outline-offset: 3px;
+}
+
+.modal-fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  color: #26352b;
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.modal h3 {
+  color: #245438;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.modal p {
+  color: #526b58;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+[data-theme="escuro"] .modal {
+  background: #1c2822;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .modal h3 {
+  color: #8fd1a6;
+}
+
+[data-theme="escuro"] .modal p {
+  color: #9aaa9f;
+}
+
+[data-theme="escuro"] .planos-botao-secundario {
+  background: #121a15;
+  border-color: #3a4a40;
+  color: #e6efe8;
+}
+
+[data-theme="escuro"] .planos-botao-perigo {
+  background: #8c2a1f;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .planos-card {
+    padding: 20px;
+  }
+}
